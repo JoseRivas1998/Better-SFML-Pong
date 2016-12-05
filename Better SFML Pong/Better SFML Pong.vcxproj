@@ -150,23 +150,34 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Constants.h" />
-    <ClInclude Include="InputProcessor.h" />
-    <ClInclude Include="MyInput.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="src\Constants.h" />
+    <ClInclude Include="src\GameStates\GameState.h" />
+    <ClInclude Include="src\Managers\GameStateManager.h" />
+    <ClInclude Include="src\Managers\InputProcessor.h" />
+    <ClInclude Include="src\Managers\MyInput.h" />
+    <ClInclude Include="src\GameStates\PlayState.h" />
+    <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\targetver.h" />
+    <ClInclude Include="src\GameStates\TitleState.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Constants.cpp" />
-    <ClCompile Include="InputProcessor.cpp" />
-    <ClCompile Include="MyInput.cpp" />
-    <ClCompile Include="Pong.cpp" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="src\Constants.cpp" />
+    <ClCompile Include="src\GameStates\GameState.cpp" />
+    <ClCompile Include="src\Managers\GameStateManager.cpp" />
+    <ClCompile Include="src\Managers\InputProcessor.cpp" />
+    <ClCompile Include="src\Managers\MyInput.cpp" />
+    <ClCompile Include="src\GameStates\PlayState.cpp" />
+    <ClCompile Include="src\Pong.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\GameStates\TitleState.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

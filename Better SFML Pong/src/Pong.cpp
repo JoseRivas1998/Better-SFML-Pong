@@ -5,7 +5,8 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Constants.h"
-#include "InputProcessor.h"
+#include "Managers/InputProcessor.h"
+#include "Managers/GameStateManager.h"
 
 using namespace sf;
 
@@ -15,6 +16,10 @@ int main()
 	VideoMode vm(800, 600);
 
 	RenderWindow window(vm, Constants::TITLE, Style::Default);
+
+	GameStateManager gsm;
+
+	Clock clock;
 
 	while (window.isOpen())
 	{
@@ -39,7 +44,14 @@ int main()
 				input.keyUp(event.key.code);
 			}
 		}
-
+		if (Constants::closeWindow) window.close();
+		Time deltaTime = clock.restart();
+		float dt = deltaTime.asSeconds();
+		gsm.handleInput();
+		gsm.update(dt);
+		window.clear();
+		gsm.draw(&window);
+		window.display();
 		MyInput::update();
 	}
     return 0;

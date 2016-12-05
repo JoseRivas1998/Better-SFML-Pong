@@ -24,10 +24,8 @@ void PlayState::handleInput()
 
 void PlayState::update(float dt)
 {
-	std::cout << "Play State Update" << std::endl;
 }
 
 void PlayState::draw(RenderWindow* window)
 {
-
 }

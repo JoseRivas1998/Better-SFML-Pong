@@ -12,6 +12,7 @@ PlayState::PlayState(GameStateManager* gsm) : GameState(gsm)
 void PlayState::init()
 {
 	std::cout << "Play State Init" << std::endl;
+	ball = new Ball(25, 25, Ball::BounceMode::TOP_BOTTOM);
 }
 
 void PlayState::handleInput()
@@ -24,8 +25,10 @@ void PlayState::handleInput()
 
 void PlayState::update(float dt)
 {
+	ball->update(dt);
 }
 
 void PlayState::draw(RenderWindow* window)
 {
+	ball->draw(window);
 }

@@ -5,7 +5,7 @@ using namespace sf;
 
 class Entity
 {
-private:
+protected:
 	FloatRect m_position;
 	Vector2f m_velocity;
 public:

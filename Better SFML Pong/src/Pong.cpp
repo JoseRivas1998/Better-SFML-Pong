@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <sstream>
 #include "Constants.h"
 #include "Managers/InputProcessor.h"
 #include "Managers/GameStateManager.h"
@@ -13,9 +14,15 @@ using namespace sf;
 int main()
 {
 	InputProcessor input;
-	VideoMode vm(800, 600);
+	VideoMode vm(Constants::WORLD_WIDTH, Constants::WORLD_HEIGHT);
 
 	RenderWindow window(vm, Constants::TITLE, Style::Default);
+
+	Constants::loadSound();
+	Constants::loadFont();
+
+	float fpsTimer = 0;
+	const float fpsTime = 1;
 
 	GameStateManager gsm;
 
@@ -47,11 +54,20 @@ int main()
 		if (Constants::closeWindow) window.close();
 		Time deltaTime = clock.restart();
 		float dt = deltaTime.asSeconds();
+		fpsTimer += dt;
+		if (fpsTimer > fpsTime)
+		{
+			std::stringstream fpsStream;
+			fpsStream << Constants::TITLE << " | " << (int)(1 / dt) << " fps";
+			window.setTitle(fpsStream.str());
+			fpsTimer = 0;
+		}
 		gsm.handleInput();
 		gsm.update(dt);
 		window.clear();
 		gsm.draw(&window);
 		window.display();
+		Constants::initSeed++;
 		MyInput::update();
 	}
     return 0;

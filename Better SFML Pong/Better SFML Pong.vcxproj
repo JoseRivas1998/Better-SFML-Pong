@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Constants.h" />
+    <ClInclude Include="src\Entities\Ball.h" />
     <ClInclude Include="src\Entities\Entity.h" />
     <ClInclude Include="src\GameStates\GameState.h" />
     <ClInclude Include="src\Managers\GameStateManager.h" />
@@ -163,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Constants.cpp" />
+    <ClCompile Include="src\Entities\Ball.cpp" />
     <ClCompile Include="src\Entities\Entity.cpp" />
     <ClCompile Include="src\GameStates\GameState.cpp" />
     <ClCompile Include="src\Managers\GameStateManager.cpp" />

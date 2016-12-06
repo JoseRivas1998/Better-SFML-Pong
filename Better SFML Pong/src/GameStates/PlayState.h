@@ -1,11 +1,11 @@
 #pragma once
 #include "GameState.h"
-#include "../Entities/Entity.h"
+#include "../Entities/Ball.h"
 class PlayState :
 	public GameState
 {
 private:
-	Entity e;
+	Ball *ball;
 public:
 	PlayState(GameStateManager* gsm);
 	virtual void handleInput();

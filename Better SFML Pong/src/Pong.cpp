@@ -7,6 +7,7 @@
 #include <sstream>
 #include "Constants.h"
 #include "Managers/InputProcessor.h"
+#include "Managers/XInputProcessor.h"
 #include "Managers/GameStateManager.h"
 
 using namespace sf;
@@ -14,6 +15,7 @@ using namespace sf;
 int main()
 {
 	InputProcessor input;
+	XInputProcessor xInput;
 	VideoMode vm(Constants::WORLD_WIDTH, Constants::WORLD_HEIGHT);
 
 	RenderWindow window(vm, Constants::TITLE, Style::Default);
@@ -49,6 +51,18 @@ int main()
 			if (event.type == Event::KeyReleased)
 			{
 				input.keyUp(event.key.code);
+			}
+			if (event.type == Event::JoystickButtonPressed)
+			{
+				xInput.buttonDown(event.joystickButton.joystickId, event.joystickButton.button);
+			}
+			if (event.type == Event::JoystickButtonReleased)
+			{
+				xInput.buttonUp(event.joystickButton.joystickId, event.joystickButton.button);
+			}
+			if (event.type == Event::JoystickMoved)
+			{
+				xInput.axisMoved(event.joystickMove.joystickId, event.joystickMove.axis, event.joystickMove.position);
 			}
 		}
 		if (Constants::closeWindow) window.close();

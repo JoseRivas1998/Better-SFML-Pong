@@ -49,3 +49,31 @@ void Constants::loadFont()
 		//Constants::fontLoaded = Constants::font.loadFromFile("assets/font/prstartk.ttf");
 	}
 }
+
+float Constants::clamp(float n, float min, float max)
+{
+	float r = n;
+	if (r < min)
+	{
+		r = min;
+	}
+	if (r > max)
+	{
+		r = max;
+	}
+	return r;
+}
+
+int Constants::clamp(int n, int min, int max)
+{
+	int r = n;
+	if (r < min)
+	{
+		r = min;
+	}
+	if (r > max)
+	{
+		r = max;
+	}
+	return r;
+}

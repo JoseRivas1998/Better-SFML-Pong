@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Ball.h"
 #include "../Constants.h"
-#include <iostream>
 
 Ball::Ball() : Ball::Ball(0, 0, 0, 0, Ball::BounceMode::TOP_BOTTOM)
 {
@@ -17,7 +16,6 @@ Ball::Ball(float width, float height, Ball::BounceMode bounceMode) : Ball::Ball(
 
 Ball::Ball(float x, float y, float width, float height, Ball::BounceMode bounceMode) : Entity::Entity(x, y, width, height)
 {
-	std::cout << "(" << m_position.left << "," << m_position.top << ") (" << m_position.width << "," << m_position.height << ")" << std::endl;
 	m_bounceMode = bounceMode;
 	m_seed = 0;
 	reset();
@@ -52,6 +50,24 @@ void Ball::update(float dt)
 	default: break;
 	}
 	m_seed++;
+}
+
+void Ball::collision(Paddle * paddle)
+{
+	if (collidingWith(paddle))
+	{
+		switch (paddle->getSide())
+		{
+		case Paddle::Side::LEFT:
+			m_position.left = paddle->getX() + paddle->getWidth() + 1;
+			break;
+		case Paddle::Side::RIGHT:
+			m_position.left = paddle->getX() - m_position.width - 1;
+			break;
+		default: break;
+		}
+		bounceX();
+	}
 }
 
 void Ball::updateBounceAllSides()

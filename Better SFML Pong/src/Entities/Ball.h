@@ -1,5 +1,7 @@
 #pragma once
 #include "Entity.h"
+#include "Paddle.h"
+class Paddle;
 class Ball :
 	public Entity
 {
@@ -13,7 +15,7 @@ public:
 	Ball(float x, float y, float width, float height, Ball::BounceMode bounceMode);
 	void reset();
 	void update(float dt);
-	//void collision(Paddle p);
+	void collision(Paddle * paddle);
 private:
 	BounceMode m_bounceMode;
 	float m_speed;

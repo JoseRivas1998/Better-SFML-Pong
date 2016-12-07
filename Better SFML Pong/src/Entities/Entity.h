@@ -18,7 +18,7 @@ public:
 	void setPosition(float x, float y, float width, float height);
 	void setPosition(FloatRect position);
 	bool collidingWith(FloatRect r);
-	bool collidingWith(Entity e);
+	bool collidingWith(Entity * e);
 	void draw(RenderWindow* window);
 	void draw(RenderWindow* window, Color color);
 	float getX();

@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "TitleState.h"
 #include "../Managers/MyInput.h"
-#include <iostream>
 
 TitleState::TitleState(GameStateManager* gsm) : GameState(gsm)
 {
@@ -10,7 +9,6 @@ TitleState::TitleState(GameStateManager* gsm) : GameState(gsm)
 
 void TitleState::init()
 {
-	std::cout << "Title State Init" << std::endl;
 	ball = new Ball(25, 25, Ball::BounceMode::ALL_SIDES);
 	ballResetTimer = 0;
 	title.setFont(Constants::font);

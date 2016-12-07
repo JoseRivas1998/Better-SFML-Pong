@@ -16,8 +16,8 @@ public:
 		TITLE, PLAY
 	};
 
-	static const int WORLD_WIDTH = 800;
-	static const int WORLD_HEIGHT = 600; 
+	static const int WORLD_WIDTH = 1280;
+	static const int WORLD_HEIGHT = 720; 
 	static const float PI;
 	static const float PI2;
 	static const std::string TITLE;
@@ -32,6 +32,7 @@ public:
 	static Sound bounceXSound;
 	static Sound bounceYSound;
 	static Font font;
-
+	static float clamp(float n, float min, float max);
+	static int clamp(int n, int min, int max);
 };
 

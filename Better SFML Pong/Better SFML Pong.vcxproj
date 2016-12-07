@@ -151,26 +151,34 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Constants.h" />
+    <ClInclude Include="src\Entities\AIPaddle.h" />
     <ClInclude Include="src\Entities\Ball.h" />
     <ClInclude Include="src\Entities\Entity.h" />
+    <ClInclude Include="src\Entities\Paddle.h" />
+    <ClInclude Include="src\Entities\PlayerPaddle.h" />
     <ClInclude Include="src\GameStates\GameState.h" />
     <ClInclude Include="src\Managers\GameStateManager.h" />
     <ClInclude Include="src\Managers\InputProcessor.h" />
     <ClInclude Include="src\Managers\MyInput.h" />
     <ClInclude Include="src\GameStates\PlayState.h" />
+    <ClInclude Include="src\Managers\XInputProcessor.h" />
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
     <ClInclude Include="src\GameStates\TitleState.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Constants.cpp" />
+    <ClCompile Include="src\Entities\AIPaddle.cpp" />
     <ClCompile Include="src\Entities\Ball.cpp" />
     <ClCompile Include="src\Entities\Entity.cpp" />
+    <ClCompile Include="src\Entities\Paddle.cpp" />
+    <ClCompile Include="src\Entities\PlayerPaddle.cpp" />
     <ClCompile Include="src\GameStates\GameState.cpp" />
     <ClCompile Include="src\Managers\GameStateManager.cpp" />
     <ClCompile Include="src\Managers\InputProcessor.cpp" />
     <ClCompile Include="src\Managers\MyInput.cpp" />
     <ClCompile Include="src\GameStates\PlayState.cpp" />
+    <ClCompile Include="src\Managers\XInputProcessor.cpp" />
     <ClCompile Include="src\Pong.cpp" />
     <ClCompile Include="src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -179,6 +187,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\GameStates\TitleState.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

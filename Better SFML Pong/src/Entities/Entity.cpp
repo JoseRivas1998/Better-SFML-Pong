@@ -59,9 +59,9 @@ bool Entity::collidingWith(FloatRect r)
 			m_position.top + m_position.height > r.top);
 }
 
-bool Entity::collidingWith(Entity e)
+bool Entity::collidingWith(Entity * e)
 {
-	return collidingWith(e.getPosition());
+	return collidingWith(e->getPosition());
 }
 
 void Entity::draw(RenderWindow * window)

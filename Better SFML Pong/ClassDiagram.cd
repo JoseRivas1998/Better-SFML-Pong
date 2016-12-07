@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Constants" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAQAAAAAFgAQAAAAiAQAAEgAEAAAAAAIAACBGAAAA=</HashCode>
+      <FileName>src\Constants.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIPaddle" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>src\Entities\AIPaddle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ball" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAC4gAFAAAAIAAAAAAAAAAAAAAAAgAAAAAAAQAEAoA=</HashCode>
+      <FileName>src\Entities\Ball.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAJACAAKCABAkAAAIGAAACAAAIQAQEAABAAGAAAAA=</HashCode>
+      <FileName>src\Entities\Entity.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Paddle" Collapsed="true">
+    <Position X="1.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAIAAAAAAAAACAAAAAAAAAoACAAAAAAAEAAA=</HashCode>
+      <FileName>src\Entities\Paddle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerPaddle" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Entities\PlayerPaddle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameState" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAEJAA=</HashCode>
+      <FileName>src\GameStates\GameState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStateManager" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAIIAAAAAAAAAAAAEAAAAAAAEAAQ=</HashCode>
+      <FileName>src\Managers\GameStateManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputProcessor" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Managers\InputProcessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyInput" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAIAAAAAIAAAAEAAAICAAAAAEAAIAgEQAA=</HashCode>
+      <FileName>src\Managers\MyInput.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayState" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAgAAAAAAAAAAAAAMQAAAAAAAAAAIBQAIACEAkAAA=</HashCode>
+      <FileName>src\GameStates\PlayState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XInputProcessor" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAACAAAAAQgAAAAAAQAAEAAAAAAAAAACAAIGkG8AA=</HashCode>
+      <FileName>src\Managers\XInputProcessor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TitleState" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAgACAQAAAEAAAAAIAAAAAAAAAAAIABAAAAAAEAAA=</HashCode>
+      <FileName>src\GameStates\TitleState.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
